@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:thebaristascookbook/src/model/page_model.dart';
 
-class NavBar extends StatefulWidget {
-  const NavBar({super.key});
+class NavBar extends StatelessWidget {
+  NavBar({super.key, required this.pageNotifier});
+  final PageModel pageNotifier;
 
-  @override
-  State<NavBar> createState() => _NavBarState();
-}
-
-class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
       elevation: 6,
-      shape: CircularNotchedRectangle(),
+      shape: const CircularNotchedRectangle(),
       notchMargin: 5, //notche margin between floating button and bottom appbar
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -28,7 +25,7 @@ class _NavBarState extends State<NavBar> {
                   size: 36,
                   color: Color(0xff8F542E),
                 ),
-                onPressed: () {},
+                onPressed: () => pageNotifier.page = 0,
               ),
             ),
             Expanded(
@@ -38,7 +35,7 @@ class _NavBarState extends State<NavBar> {
                   size: 36,
                   color: Color(0xff8F542E),
                 ),
-                onPressed: () {},
+                onPressed: () => pageNotifier.page = 1,
               ),
             ),
             Expanded(child: new Text('')),
@@ -49,7 +46,7 @@ class _NavBarState extends State<NavBar> {
                   size: 36,
                   color: Color(0xff8F542E),
                 ),
-                onPressed: () {},
+                onPressed: () => pageNotifier.page = 2,
               ),
             ),
             Expanded(
@@ -59,7 +56,7 @@ class _NavBarState extends State<NavBar> {
                   size: 36,
                   color: Color(0xff8F542E),
                 ),
-                onPressed: () {},
+                onPressed: () => pageNotifier.page = 3,
               ),
             ),
           ],

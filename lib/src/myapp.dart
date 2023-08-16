@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thebaristascookbook/src/views/home.dart';
+import 'package:thebaristascookbook/src/views/MainPage.dart';
+import 'package:thebaristascookbook/src/views/login/login_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const Home(),
+        // routes: Routes.routes,
+        home: LoginPage(),
       );
 }

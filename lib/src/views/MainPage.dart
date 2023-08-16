@@ -1,26 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:thebaristascookbook/src/model/page_model.dart';
 import 'package:thebaristascookbook/src/widgets/navbar.dart';
+import 'package:thebaristascookbook/src/widgets/page_controller_widget.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class MainPage extends StatelessWidget {
+  MainPage({super.key});
+  final PageModel _pageNotifier = PageModel();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
+        toolbarHeight: 80,
         elevation: 0,
         backgroundColor: const Color(0xffFFFCF4),
-        iconTheme: const IconThemeData(color: Colors.black, size: 40),
+        iconTheme: const IconThemeData(color: Colors.black, size: 36),
         title: SizedBox(
           height: 44,
           child: TextFormField(
-            style: const TextStyle(fontSize: 16),
+            style: GoogleFonts.cormorantGaramond(fontSize: 18),
             decoration: InputDecoration(
                 contentPadding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                 filled: true,
-                fillColor: const Color.fromARGB(160, 235, 218, 204),
+                fillColor: const Color(0xffEBDACC).withOpacity(0.3),
                 hintText: 'Pesquisar',
                 hintStyle: const TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
@@ -42,18 +47,20 @@ class Home extends StatelessWidget {
                   Icons.search,
                   size: 28,
                 ),
-                suffixIconColor: const Color(0xff8F542E)),
+                suffixIconColor: Colors.grey),
           ),
         ),
       ),
-      body: const Center(
-        child: Text('Home'),
+      body: PageControllerWidget(
+        pageNotifier: _pageNotifier,
       ),
-      bottomNavigationBar: NavBar(),
+      bottomNavigationBar: NavBar(
+        pageNotifier: _pageNotifier,
+      ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xff8F542E),
+        backgroundColor: const Color(0xff8F542E),
         elevation: 0,
-        child: Icon(
+        child: const Icon(
           Icons.add,
           size: 50,
         ),
