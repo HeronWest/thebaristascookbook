@@ -16,6 +16,8 @@ class _UserFieldState extends State<UserField> {
       padding: EdgeInsets.only(bottom: 5, top: 30),
       width: screenSize.width * 0.7,
       child: TextFormField(
+        style: GoogleFonts.cormorantGaramond(
+            fontSize: 24, color: Color(0xff8F542E)),
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,

@@ -16,6 +16,8 @@ class _PasswordFieldState extends State<PasswordField> {
       padding: EdgeInsets.only(bottom: 15, top: 2),
       width: screenSize.width * 0.7,
       child: TextFormField(
+        style: GoogleFonts.cormorantGaramond(
+            fontSize: 24, color: Color(0xff8F542E)),
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
