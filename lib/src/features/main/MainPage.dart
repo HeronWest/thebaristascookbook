@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:thebaristascookbook/src/model/page_model.dart';
+import 'package:thebaristascookbook/src/features/main/controller/page_controller.dart';
+import 'package:thebaristascookbook/src/widgets/drawer.dart';
 import 'package:thebaristascookbook/src/widgets/navbar.dart';
 import 'package:thebaristascookbook/src/widgets/page_controller_widget.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({super.key});
-  final PageModel _pageNotifier = PageModel();
+  final PageViewController _pageNotifier = PageViewController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(),
+      drawer: const CustomDrawer(),
       appBar: AppBar(
         toolbarHeight: 80,
         elevation: 0,

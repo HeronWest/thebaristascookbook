@@ -31,7 +31,6 @@ class SubTypeMenu extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Container(
         margin: EdgeInsets.only(top: 20, bottom: 5),
-        width: screenSize.height * 0.8,
         child: Row(
           children: [..._subtypes.map((e) => e).toList()],
         ),

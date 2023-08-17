@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:thebaristascookbook/src/views/recipe_details/components/ingredients.dart';
-import 'package:thebaristascookbook/src/views/recipe_details/components/portion_widget.dart';
-import 'package:thebaristascookbook/src/views/recipe_details/components/start_button.dart';
-import 'package:thebaristascookbook/src/views/recipe_details/components/steps.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/components/ingredients.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/components/portion_widget.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/components/start_button.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/components/steps.dart';
 
 class RecipeDetailsPage extends StatefulWidget {
   const RecipeDetailsPage({super.key});

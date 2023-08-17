@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:thebaristascookbook/src/model/page_model.dart';
-import 'package:thebaristascookbook/src/views/home/home_page.dart';
+import 'package:thebaristascookbook/src/features/main/controller/page_controller.dart';
+import 'package:thebaristascookbook/src/features/home/home_page.dart';
 
 class PageControllerWidget extends StatelessWidget {
   PageControllerWidget({super.key, required this.pageNotifier});
 
-  final PageModel pageNotifier;
+  final PageViewController pageNotifier;
   final List<Widget> _pages = [
     const HomePage(),
     const Text('Receitas'),

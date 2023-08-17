@@ -13,11 +13,11 @@ class _UserFieldState extends State<UserField> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.only(bottom: 5, top: 30),
+      padding: const EdgeInsets.only(bottom: 5, top: 30),
       width: screenSize.width * 0.7,
       child: TextFormField(
         style: GoogleFonts.cormorantGaramond(
-            fontSize: 24, color: Color(0xff8F542E)),
+            fontSize: 24, color: const Color(0xff8F542E)),
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
@@ -35,7 +35,7 @@ class _UserFieldState extends State<UserField> {
           ),
           hintText: 'Usuário',
           hintStyle: GoogleFonts.cormorantGaramond(
-              fontSize: 24, color: Color(0xff8F542E)),
+              fontSize: 24, color: const Color(0xff8F542E)),
         ),
       ),
     );

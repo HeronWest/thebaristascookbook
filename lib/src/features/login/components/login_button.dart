@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:thebaristascookbook/src/views/MainPage.dart';
+import 'package:thebaristascookbook/src/features/main/view/MainPage.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key});

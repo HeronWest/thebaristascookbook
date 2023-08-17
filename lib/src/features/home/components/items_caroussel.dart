@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:thebaristascookbook/src/views/recipe_details/recipe_details_page.dart';
+import 'package:thebaristascookbook/src/views/recipe/recipe_details_page.dart';
 
 // ignore: must_be_immutable
 class ItemsCaroussel extends StatelessWidget {

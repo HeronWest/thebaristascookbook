@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:thebaristascookbook/src/model/page_model.dart';
+import 'package:thebaristascookbook/src/features/main/controller/page_controller.dart';
 
 class NavBar extends StatelessWidget {
   NavBar({super.key, required this.pageNotifier});
-  final PageModel pageNotifier;
+  final PageViewController pageNotifier;
 
   @override
   Widget build(BuildContext context) {

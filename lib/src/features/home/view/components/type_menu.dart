@@ -24,9 +24,8 @@ class TypeMenu extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Container(
-        width: screenSize.height * 0.8,
         child: Row(
-          children: [..._types.map((e) => Expanded(child: e)).toList()],
+          children: [..._types.map((e) => e).toList()],
         ),
       ),
     );
@@ -41,7 +40,6 @@ class TypeMenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
       height: 35,
       margin: const EdgeInsets.only(right: 10),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
