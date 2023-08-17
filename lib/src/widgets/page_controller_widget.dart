@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:thebaristascookbook/src/features/home/view/home_page.dart';
 import 'package:thebaristascookbook/src/features/main/controller/page_controller.dart';
-import 'package:thebaristascookbook/src/features/home/home_page.dart';
 
 class PageControllerWidget extends StatelessWidget {
   PageControllerWidget({super.key, required this.pageNotifier});

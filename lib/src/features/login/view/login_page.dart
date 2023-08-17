@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:thebaristascookbook/src/features/help/help_page.dart';
-import 'package:thebaristascookbook/src/features/login/components/login_button.dart';
+import 'package:thebaristascookbook/src/features/login/view/components/login_button.dart';
 import 'package:thebaristascookbook/src/features/login/view/components/password_field.dart';
 import 'package:thebaristascookbook/src/features/login/view/components/user_field.dart';
 

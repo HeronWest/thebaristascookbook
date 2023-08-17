@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:thebaristascookbook/src/features/login/view/login_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -127,7 +128,12 @@ class CustomDrawer extends StatelessWidget {
                   thickness: 1.25,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: ((context) => LoginPage())),
+                        (route) => false);
+                  },
                   child: SizedBox(
                     height: 50,
                     child: Padding(
@@ -172,7 +178,7 @@ class CustomDrawer extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'GitHub',
+                          'Contato',
                           style: GoogleFonts.cormorantGaramond(
                               fontSize: 24, fontWeight: FontWeight.w400),
                         ),
@@ -197,7 +203,7 @@ class CustomDrawer extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'Linkedin',
+                          'Instagram',
                           style: GoogleFonts.cormorantGaramond(
                               fontSize: 24, fontWeight: FontWeight.w400),
                         ),

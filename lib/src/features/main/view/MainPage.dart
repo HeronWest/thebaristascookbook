@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thebaristascookbook/src/features/main/controller/page_controller.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/new_recipe_page.dart';
 import 'package:thebaristascookbook/src/widgets/drawer.dart';
 import 'package:thebaristascookbook/src/widgets/navbar.dart';
 import 'package:thebaristascookbook/src/widgets/page_controller_widget.dart';
@@ -65,7 +66,30 @@ class MainPage extends StatelessWidget {
           Icons.add,
           size: 50,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              PageRouteBuilder(
+                barrierDismissible: true,
+                opaque: false,
+                pageBuilder: (context, animation, secondaryAnimation) =>
+                    const NewRecipePage(),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                  const begin = Offset(0.0, 1.0);
+                  const end = Offset.zero;
+                  const curve = Curves.ease;
+
+                  var tween = Tween(begin: begin, end: end)
+                      .chain(CurveTween(curve: curve));
+
+                  return SlideTransition(
+                    position: animation.drive(tween),
+                    child: child,
+                  );
+                },
+              ));
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: const Color(0xffFFFCF4),
