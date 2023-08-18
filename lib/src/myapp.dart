@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thebaristascookbook/src/features/login/view/login_page.dart';
+import 'package:thebaristascookbook/src/features/introduction/introduction_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -12,6 +12,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         // routes: Routes.routes,
-        home: const LoginPage(),
+        home: const IntroductionPage(),
       );
 }

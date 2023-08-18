@@ -33,7 +33,7 @@ class HelpPage extends StatelessWidget {
                 'Dúvidas\nfrequentes',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.cormorantGaramond(
-                    color: Color(0xff8F542E), fontSize: 48),
+                    color: const Color(0xff8F542E), fontSize: 48),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 25.0),
@@ -57,7 +57,7 @@ class HelpPage extends StatelessWidget {
                             '''Querido Usuário,\nTenho ciência que erros e poblemas podem acontecer a qualquer momento. Qualquer dúvida ou problema entre em contato no seguinte email:\n\nheronbarista@gmail.com\n\nAgradecido!''',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.cormorantGaramond(
-                                color: Color(0xff8F542E)),
+                                color: const Color(0xff8F542E)),
                             minFontSize: 20,
                           ),
                         ),

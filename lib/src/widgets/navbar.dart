@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thebaristascookbook/src/features/main/controller/page_controller.dart';
 
 class NavBar extends StatelessWidget {
-  NavBar({super.key, required this.pageNotifier});
+  const NavBar({super.key, required this.pageNotifier});
   final PageViewController pageNotifier;
 
   @override
@@ -38,7 +38,7 @@ class NavBar extends StatelessWidget {
                 onPressed: () => pageNotifier.page = 1,
               ),
             ),
-            Expanded(child: new Text('')),
+            const Expanded(child: Text('')),
             Expanded(
               child: IconButton(
                 icon: const Icon(

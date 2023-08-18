@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:thebaristascookbook/src/features/login/view/login_page.dart';
+import 'package:thebaristascookbook/src/features/welcome/welcome_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -17,19 +17,19 @@ class CustomDrawer extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.settings_outlined,
                 ),
                 alignment: Alignment.centerRight,
                 iconSize: 48,
-                color: Color(0xff291505).withOpacity(0.9),
+                color: const Color(0xff291505).withOpacity(0.9),
               ),
             ],
           ),
           Icon(
             Icons.account_circle,
             size: 130,
-            color: Color(0xff291505).withOpacity(0.9),
+            color: const Color(0xff291505).withOpacity(0.9),
             weight: 100,
           ),
           Padding(
@@ -38,7 +38,7 @@ class CustomDrawer extends StatelessWidget {
               'Heron Antunes Guerrieri Westendoff de Oliveira',
               textAlign: TextAlign.center,
               style: GoogleFonts.content(
-                  color: Color(0xff8F542E), fontSize: 18, height: 1.25),
+                  color: const Color(0xff8F542E), fontSize: 18, height: 1.25),
             ),
           ),
           Padding(
@@ -46,7 +46,7 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Divider(
-                  color: Color(0xff291505).withOpacity(0.9),
+                  color: const Color(0xff291505).withOpacity(0.9),
                   thickness: 1.25,
                 ),
                 InkWell(
@@ -60,7 +60,7 @@ class CustomDrawer extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.coffee,
-                            color: Color(0xff291505).withOpacity(0.9),
+                            color: const Color(0xff291505).withOpacity(0.9),
                             size: 36,
                           ),
                           Padding(
@@ -68,15 +68,15 @@ class CustomDrawer extends StatelessWidget {
                             child: Text(
                               'Minhas receitas',
                               style: GoogleFonts.content(
-                                  color: Color(0xff8F542E),
+                                  color: const Color(0xff8F542E),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500),
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Icon(
                             Icons.arrow_forward_ios,
-                            color: Color(0xff291505).withOpacity(0.9),
+                            color: const Color(0xff291505).withOpacity(0.9),
                             size: 18,
                           ),
                         ],
@@ -85,7 +85,7 @@ class CustomDrawer extends StatelessWidget {
                   ),
                 ),
                 Divider(
-                  color: Color(0xff291505).withOpacity(0.9),
+                  color: const Color(0xff291505).withOpacity(0.9),
                   thickness: 1.25,
                 ),
                 InkWell(
@@ -99,7 +99,7 @@ class CustomDrawer extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.history,
-                            color: Color(0xff291505).withOpacity(0.9),
+                            color: const Color(0xff291505).withOpacity(0.9),
                             size: 36,
                           ),
                           Padding(
@@ -107,15 +107,15 @@ class CustomDrawer extends StatelessWidget {
                             child: Text(
                               'Histórico',
                               style: GoogleFonts.content(
-                                  color: Color(0xff8F542E),
+                                  color: const Color(0xff8F542E),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500),
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Icon(
                             Icons.arrow_forward_ios,
-                            color: Color(0xff291505).withOpacity(0.9),
+                            color: const Color(0xff291505).withOpacity(0.9),
                             size: 18,
                           ),
                         ],
@@ -124,14 +124,15 @@ class CustomDrawer extends StatelessWidget {
                   ),
                 ),
                 Divider(
-                  color: Color(0xff291505).withOpacity(0.9),
+                  color: const Color(0xff291505).withOpacity(0.9),
                   thickness: 1.25,
                 ),
                 InkWell(
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: ((context) => LoginPage())),
+                        MaterialPageRoute(
+                            builder: ((context) => const WelcomePage())),
                         (route) => false);
                   },
                   child: SizedBox(
@@ -143,7 +144,7 @@ class CustomDrawer extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.exit_to_app,
-                            color: Color(0xff291505).withOpacity(0.9),
+                            color: const Color(0xff291505).withOpacity(0.9),
                             size: 36,
                           ),
                           Padding(
@@ -151,7 +152,7 @@ class CustomDrawer extends StatelessWidget {
                             child: Text(
                               'Sair',
                               style: GoogleFonts.content(
-                                  color: Color(0xff8F542E),
+                                  color: const Color(0xff8F542E),
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500),
                             ),

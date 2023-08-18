@@ -14,17 +14,18 @@ class LoginButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => MainPage()),
           );
         },
-        child: Text(
-          'Entrar',
-          style: GoogleFonts.cormorantGaramond(fontSize: 24),
-        ),
         style: const ButtonStyle(
+          elevation: MaterialStatePropertyAll<double>(5),
           backgroundColor: MaterialStatePropertyAll<Color>(
             Color(0xff8F542E),
           ),
           shape: MaterialStatePropertyAll(RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15)),
           )),
+        ),
+        child: Text(
+          'Entrar',
+          style: GoogleFonts.cormorantGaramond(fontSize: 24),
         ));
   }
 }
