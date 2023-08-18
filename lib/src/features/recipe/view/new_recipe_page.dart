@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thebaristascookbook/src/features/recipe/view/components/customed_tabbar.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/components/sub-view/title_view.dart';
+import 'package:thebaristascookbook/src/features/recipe/view/controllers/new_recipe_page_controller.dart';
 
 class NewRecipePage extends StatelessWidget {
-  const NewRecipePage({super.key});
+  NewRecipePage({super.key});
+
+  NewRecipePageController _controller = NewRecipePageController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,9 @@ class NewRecipePage extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(color: Color(0xff8F542E)),
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(30)),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30))),
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
@@ -50,7 +56,27 @@ class NewRecipePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  CustomTabBar()
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15.0),
+                    child: CustomTabBar(controller: _controller),
+                  ),
+                  ValueListenableBuilder(
+                    valueListenable: _controller,
+                    builder: (context, value, child) {
+                      switch (value) {
+                        case (0):
+                          return Expanded(
+                              child: SizedBox(
+                                  width: screenSize.width, child: TitleView()));
+                        case (1):
+                          return Text('Ingredientes');
+                        case (2):
+                          return Text('Modo de Preparo');
+                        default:
+                          return Text('Erro');
+                      }
+                    },
+                  ),
                 ],
               ),
             ),
