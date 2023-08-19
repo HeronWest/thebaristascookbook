@@ -9,7 +9,7 @@ class CustomedTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
         style: GoogleFonts.content(fontSize: 14),
-        cursorColor: Color(0xff8F542E),
+        cursorColor: const Color(0xff8F542E),
         maxLines: maxLines,
         decoration: InputDecoration(
             contentPadding:

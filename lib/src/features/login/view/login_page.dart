@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                 'The Barista\'s Cookbook',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.cormorantGaramond(
-                    color: Color(0xff8F542E), fontSize: 48),
+                    color: const Color(0xff8F542E), fontSize: 48),
               ),
               const UserField(),
               const PasswordField(),

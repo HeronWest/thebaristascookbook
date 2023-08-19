@@ -14,10 +14,6 @@ class LoginButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => MainPage()),
           );
         },
-        child: Text(
-          'Entrar',
-          style: GoogleFonts.cormorantGaramond(fontSize: 24),
-        ),
         style: const ButtonStyle(
           backgroundColor: MaterialStatePropertyAll<Color>(
             Color(0xff8F542E),
@@ -25,6 +21,10 @@ class LoginButton extends StatelessWidget {
           shape: MaterialStatePropertyAll(RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15)),
           )),
+        ),
+        child: Text(
+          'Entrar',
+          style: GoogleFonts.cormorantGaramond(fontSize: 24),
         ));
   }
 }

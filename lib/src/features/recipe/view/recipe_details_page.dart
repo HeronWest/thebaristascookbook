@@ -71,7 +71,7 @@ class _RecipeDetailsPageState extends State<RecipeDetailsPage> {
                               'Moccaccino Chocolate (Receita para Coados)',
                               style: GoogleFonts.content(
                                   fontSize: 24,
-                                  color: Color(0xff8F542E),
+                                  color: const Color(0xff8F542E),
                                   fontWeight: FontWeight.w600,
                                   height: 1.25),
                               maxLines: 2,
@@ -83,7 +83,7 @@ class _RecipeDetailsPageState extends State<RecipeDetailsPage> {
                               child: Text(
                                 'Ingredientes',
                                 style: GoogleFonts.cormorantGaramond(
-                                    color: Color(0xff8F542E), fontSize: 28),
+                                    color: const Color(0xff8F542E), fontSize: 28),
                               ),
                             ),
                             IngredientsWidget(),
@@ -92,10 +92,10 @@ class _RecipeDetailsPageState extends State<RecipeDetailsPage> {
                               child: Text(
                                 'Modo de Preparo',
                                 style: GoogleFonts.cormorantGaramond(
-                                    color: Color(0xff8F542E), fontSize: 28),
+                                    color: const Color(0xff8F542E), fontSize: 28),
                               ),
                             ),
-                            PrepareSteps()
+                            const PrepareSteps()
                           ],
                         ),
                       ),

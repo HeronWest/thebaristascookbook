@@ -8,8 +8,8 @@ class TitleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<DropdownMenuEntry> dropdownMenuEntries = [
-      DropdownMenuEntry(value: "Moka", label: "Moka"),
-      DropdownMenuEntry(value: "Espresso", label: "Espresso"),
+      const DropdownMenuEntry(value: "Moka", label: "Moka"),
+      const DropdownMenuEntry(value: "Espresso", label: "Espresso"),
     ];
     var screenSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
@@ -22,7 +22,7 @@ class TitleView extends StatelessWidget {
             Text(
               "Nome da receita:",
               style:
-                  GoogleFonts.content(fontSize: 18, color: Color(0xff8F542E)),
+                  GoogleFonts.content(fontSize: 18, color: const Color(0xff8F542E)),
               textAlign: TextAlign.start,
             ),
             CustomedTextField(),
@@ -31,7 +31,7 @@ class TitleView extends StatelessWidget {
               child: Text(
                 "Descrição:",
                 style:
-                    GoogleFonts.content(fontSize: 18, color: Color(0xff8F542E)),
+                    GoogleFonts.content(fontSize: 18, color: const Color(0xff8F542E)),
                 textAlign: TextAlign.start,
               ),
             ),
@@ -43,7 +43,7 @@ class TitleView extends StatelessWidget {
               child: Text(
                 "Foto:",
                 style:
-                    GoogleFonts.content(fontSize: 18, color: Color(0xff8F542E)),
+                    GoogleFonts.content(fontSize: 18, color: const Color(0xff8F542E)),
                 textAlign: TextAlign.start,
               ),
             ),
@@ -51,7 +51,7 @@ class TitleView extends StatelessWidget {
               height: screenSize.width * 0.6,
               width: screenSize.width,
               decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xff8F542E)),
+                  border: Border.all(color: const Color(0xff8F542E)),
                   borderRadius: BorderRadius.circular(15)),
               child: FractionallySizedBox(
                 widthFactor: 0.5,
@@ -69,7 +69,7 @@ class TitleView extends StatelessWidget {
               child: Text(
                 "Método:",
                 style:
-                    GoogleFonts.content(fontSize: 18, color: Color(0xff8F542E)),
+                    GoogleFonts.content(fontSize: 18, color: const Color(0xff8F542E)),
                 textAlign: TextAlign.start,
               ),
             ),

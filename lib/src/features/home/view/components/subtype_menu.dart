@@ -4,22 +4,22 @@ class SubTypeMenu extends StatelessWidget {
   SubTypeMenu({super.key});
 
   final List<Widget> _subtypes = [
-    SubTypeMenuItem(
+    const SubTypeMenuItem(
       text: 'Lattes',
     ),
-    SubTypeMenuItem(
+    const SubTypeMenuItem(
       text: 'Cappuccinos',
     ),
-    SubTypeMenuItem(
+    const SubTypeMenuItem(
       text: 'Coados',
     ),
-    SubTypeMenuItem(
+    const SubTypeMenuItem(
       text: 'Espressos',
     ),
-    SubTypeMenuItem(
+    const SubTypeMenuItem(
       text: 'Iced',
     ),
-    SubTypeMenuItem(
+    const SubTypeMenuItem(
       text: 'Cold Brew',
     ),
   ];
@@ -30,7 +30,7 @@ class SubTypeMenu extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Container(
-        margin: EdgeInsets.only(top: 20, bottom: 5),
+        margin: const EdgeInsets.only(top: 20, bottom: 5),
         child: Row(
           children: [..._subtypes.map((e) => e).toList()],
         ),

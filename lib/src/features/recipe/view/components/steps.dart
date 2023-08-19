@@ -17,8 +17,8 @@ class _PrepareStepsState extends State<PrepareSteps> {
     return SingleChildScrollView(
       child: Stepper(
         currentStep: _index,
-        controlsBuilder: (context, controller) => Row(children: []),
-        physics: NeverScrollableScrollPhysics(),
+        controlsBuilder: (context, controller) => const Row(children: []),
+        physics: const NeverScrollableScrollPhysics(),
         onStepTapped: (int index) {
           setState(() {
             _index = index;
@@ -35,25 +35,25 @@ class _PrepareStepsState extends State<PrepareSteps> {
               style: GoogleFonts.content(fontSize: 16),
             ),
           ),
-          Step(
-            title: const Text('Passo 2'),
-            content: const Text('Adicione o café'),
+          const Step(
+            title: Text('Passo 2'),
+            content: Text('Adicione o café'),
           ),
-          Step(
-            title: const Text('Passo 3'),
-            content: const Text('Adicione o leite'),
+          const Step(
+            title: Text('Passo 3'),
+            content: Text('Adicione o leite'),
           ),
-          Step(
-            title: const Text('Passo 4'),
-            content: const Text('Adicione o açúcar'),
+          const Step(
+            title: Text('Passo 4'),
+            content: Text('Adicione o açúcar'),
           ),
-          Step(
-            title: const Text('Passo 5'),
-            content: const Text('Misture tudo'),
+          const Step(
+            title: Text('Passo 5'),
+            content: Text('Misture tudo'),
           ),
-          Step(
-            title: const Text('Passo 6'),
-            content: const Text('Sirva'),
+          const Step(
+            title: Text('Passo 6'),
+            content: Text('Sirva'),
           )
         ],
         stepIconBuilder: (stepIndex, stepState) {
@@ -67,7 +67,7 @@ class _PrepareStepsState extends State<PrepareSteps> {
             child: Text(
               '${n.toRomanNumeralString()}',
               style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
+                  const TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
             ),
           );
         },

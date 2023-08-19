@@ -7,7 +7,7 @@ import 'package:thebaristascookbook/src/features/recipe/view/controllers/new_rec
 class NewRecipePage extends StatelessWidget {
   NewRecipePage({super.key});
 
-  NewRecipePageController _controller = NewRecipePageController();
+  final NewRecipePageController _controller = NewRecipePageController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +25,9 @@ class NewRecipePage extends StatelessWidget {
           heightFactor: 1,
           child: Container(
             decoration: BoxDecoration(
-                border: Border.all(color: Color(0xff8F542E)),
+                border: Border.all(color: const Color(0xff8F542E)),
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30))),
             child: Padding(
@@ -43,7 +43,7 @@ class NewRecipePage extends StatelessWidget {
                         child: Text(
                           'Cancelar',
                           style: GoogleFonts.content(
-                              color: Color(0xff8F542E), fontSize: 18),
+                              color: const Color(0xff8F542E), fontSize: 18),
                         ),
                       ),
                       TextButton(
@@ -51,7 +51,7 @@ class NewRecipePage extends StatelessWidget {
                         child: Text(
                           'Salvar',
                           style: GoogleFonts.content(
-                              color: Color(0xff8F542E), fontSize: 18),
+                              color: const Color(0xff8F542E), fontSize: 18),
                         ),
                       ),
                     ],
@@ -67,13 +67,13 @@ class NewRecipePage extends StatelessWidget {
                         case (0):
                           return Expanded(
                               child: SizedBox(
-                                  width: screenSize.width, child: TitleView()));
+                                  width: screenSize.width, child: const TitleView()));
                         case (1):
-                          return Text('Ingredientes');
+                          return const Text('Ingredientes');
                         case (2):
-                          return Text('Modo de Preparo');
+                          return const Text('Modo de Preparo');
                         default:
-                          return Text('Erro');
+                          return const Text('Erro');
                       }
                     },
                   ),

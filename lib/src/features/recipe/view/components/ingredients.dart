@@ -41,7 +41,7 @@ class IngredientItem extends StatelessWidget {
       children: [
         Text('\u2022 $name',
             style: GoogleFonts.content(color: Colors.black, fontSize: 20)),
-        Spacer(),
+        const Spacer(),
         Text('$quantity$unit',
             style: GoogleFonts.content(
                 color: Colors.black.withOpacity(0.6), fontSize: 16)),
@@ -51,7 +51,7 @@ class IngredientItem extends StatelessWidget {
 }
 
 class _CoffeeMethodWidget extends StatelessWidget {
-  _CoffeeMethodWidget({super.key, required this.name});
+  _CoffeeMethodWidget({required this.name});
   String name;
 
   @override
@@ -66,7 +66,7 @@ class _CoffeeMethodWidget extends StatelessWidget {
             TextSpan(
                 text: name,
                 style: GoogleFonts.content(
-                    color: Color(0xff8F542E), fontSize: 20)),
+                    color: const Color(0xff8F542E), fontSize: 20)),
           ]),
         )
       ],

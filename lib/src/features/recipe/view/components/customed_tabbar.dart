@@ -16,7 +16,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Color(0xff8F542E).withOpacity(0.3),
+          color: const Color(0xff8F542E).withOpacity(0.3),
           borderRadius: BorderRadius.circular(30)),
       height: 40,
       child: ValueListenableBuilder(
@@ -34,7 +34,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
                       : Colors.transparent,
                   border: Border.all(
                       color: widget.controller.value == 0
-                          ? Color(0xff8F542E)
+                          ? const Color(0xff8F542E)
                           : Colors.transparent,
                       width: 2),
                   borderRadius: BorderRadius.circular(30),
@@ -42,7 +42,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
                 child: Text(
                   'Título',
                   style: GoogleFonts.content(
-                      color: Color(0xff8F542E),
+                      color: const Color(0xff8F542E),
                       fontWeight: FontWeight.bold,
                       fontSize: 16),
                   textAlign: TextAlign.center,
@@ -61,7 +61,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
                       : Colors.transparent,
                   border: Border.all(
                       color: widget.controller.value == 1
-                          ? Color(0xff8F542E)
+                          ? const Color(0xff8F542E)
                           : Colors.transparent,
                       width: 2),
                   borderRadius: BorderRadius.circular(30),
@@ -69,7 +69,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
                 child: Text(
                   'Ingredientes',
                   style: GoogleFonts.content(
-                      color: Color(0xff8F542E),
+                      color: const Color(0xff8F542E),
                       fontWeight: FontWeight.bold,
                       fontSize: 16),
                   textAlign: TextAlign.center,
@@ -88,7 +88,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
                       : Colors.transparent,
                   border: Border.all(
                       color: widget.controller.value == 2
-                          ? Color(0xff8F542E)
+                          ? const Color(0xff8F542E)
                           : Colors.transparent,
                       width: 2),
                   borderRadius: BorderRadius.circular(30),
@@ -96,7 +96,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
                 child: Text(
                   'Preaparo',
                   style: GoogleFonts.content(
-                      color: Color(0xff8F542E),
+                      color: const Color(0xff8F542E),
                       fontWeight: FontWeight.bold,
                       fontSize: 16),
                   textAlign: TextAlign.center,

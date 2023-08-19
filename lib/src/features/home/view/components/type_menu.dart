@@ -6,16 +6,16 @@ class TypeMenu extends StatelessWidget {
   final List<Widget> _types = [
     TypeMenuItem(
       type: 'Café',
-      color: Color(0xffEBDACC).withOpacity(0.7),
+      color: const Color(0xffEBDACC).withOpacity(0.7),
     ),
     TypeMenuItem(
       type: 'Chá',
-      color: Color(0xffF8DF86).withOpacity(0.6),
+      color: const Color(0xffF8DF86).withOpacity(0.6),
     ),
-    TypeMenuItem(type: 'Frapê', color: Color(0xffB6B926).withOpacity(0.6)),
-    TypeMenuItem(type: 'Smoothie', color: Color(0xff104B64).withOpacity(0.6)),
-    TypeMenuItem(type: 'Chocolate'),
-    TypeMenuItem(type: 'Cocktail'),
+    TypeMenuItem(type: 'Frapê', color: const Color(0xffB6B926).withOpacity(0.6)),
+    TypeMenuItem(type: 'Smoothie', color: const Color(0xff104B64).withOpacity(0.6)),
+    const TypeMenuItem(type: 'Chocolate'),
+    const TypeMenuItem(type: 'Cocktail'),
   ];
 
   @override
@@ -33,7 +33,7 @@ class TypeMenu extends StatelessWidget {
 }
 
 class TypeMenuItem extends StatelessWidget {
-  TypeMenuItem({super.key, required this.type, this.color = Colors.blue});
+  const TypeMenuItem({super.key, required this.type, this.color = Colors.blue});
   final String type;
   final Color color;
 
