@@ -1,9 +1,9 @@
-class UserModel {
-  String id;
-  String name;
-  String email;
-  String phone;
-  String token;
+// class UserModel {
+//   String id;
+//   String name;
+//   String email;
+//   String phone;
+//   String token;
 
   
-}
+// }
