@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thebaristascookbook/src/features/login/view/login_page.dart';
+import 'package:thebaristascookbook/src/features/welcome/welcome_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -130,7 +131,8 @@ class CustomDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: ((context) => const LoginPage())),
+                        MaterialPageRoute(
+                            builder: ((context) => const WelcomePage())),
                         (route) => false);
                   },
                   child: SizedBox(

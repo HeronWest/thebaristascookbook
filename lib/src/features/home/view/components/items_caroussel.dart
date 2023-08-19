@@ -19,10 +19,8 @@ class ItemsCaroussel extends StatelessWidget {
     // var screenSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Container(
-          child: Row(
-            children: [...items.map((e) => e).toList()],
-          ),
+        child: Row(
+          children: [...items.map((e) => e).toList()],
         ));
   }
 }

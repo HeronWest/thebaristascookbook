@@ -20,13 +20,10 @@ class TypeMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Container(
-        child: Row(
-          children: [..._types.map((e) => e).toList()],
-        ),
+      child: Row(
+        children: [..._types.map((e) => e).toList()],
       ),
     );
   }

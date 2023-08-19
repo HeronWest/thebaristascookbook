@@ -15,6 +15,7 @@ class LoginButton extends StatelessWidget {
           );
         },
         style: const ButtonStyle(
+          elevation: MaterialStatePropertyAll<double>(5),
           backgroundColor: MaterialStatePropertyAll<Color>(
             Color(0xff8F542E),
           ),

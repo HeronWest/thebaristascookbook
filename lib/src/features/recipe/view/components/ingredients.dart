@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class IngredientsWidget extends StatelessWidget {
   IngredientsWidget({super.key});
 
@@ -25,6 +26,7 @@ class IngredientsWidget extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class IngredientItem extends StatelessWidget {
   IngredientItem(
       {super.key,
@@ -50,6 +52,7 @@ class IngredientItem extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class _CoffeeMethodWidget extends StatelessWidget {
   _CoffeeMethodWidget({required this.name});
   String name;

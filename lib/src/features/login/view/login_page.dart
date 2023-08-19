@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:thebaristascookbook/src/features/help/help_page.dart';
+import 'package:thebaristascookbook/src/features/login/view/components/google_button.dart';
 import 'package:thebaristascookbook/src/features/login/view/components/login_button.dart';
 import 'package:thebaristascookbook/src/features/login/view/components/password_field.dart';
 import 'package:thebaristascookbook/src/features/login/view/components/user_field.dart';
@@ -18,6 +19,11 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        iconTheme: const IconThemeData(color: Color(0xff8F542E), size: 36),
+      ),
       backgroundColor: const Color(0xffFFFCF4),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.transparent,
@@ -39,24 +45,47 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       body: Center(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'The Barista\'s Cookbook',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.cormorantGaramond(
-                    color: const Color(0xff8F542E), fontSize: 48),
-              ),
-              const UserField(),
-              const PasswordField(),
-              SizedBox(
-                height: 60,
-                width: screenSize.width * 0.7,
-                child: const LoginButton(),
-              )
-            ]),
+        child: SizedBox(
+          width: screenSize.width * 0.7,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Login',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.cormorantGaramond(
+                        color: const Color(0xff8F542E), fontSize: 48),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(top: 10)),
+                const UserField(),
+                Padding(padding: EdgeInsets.only(top: 10)),
+                const PasswordField(),
+                Padding(padding: EdgeInsets.only(top: 30)),
+                SizedBox(
+                  height: 60,
+                  width: screenSize.width * 0.7,
+                  child: const LoginButton(),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Esqueceu a senha?',
+                      style: GoogleFonts.content(
+                          color: const Color(0xff8F542E),
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    )),
+                Padding(padding: EdgeInsets.only(bottom: 40)),
+                SizedBox(
+                    height: 60,
+                    width: screenSize.width * 0.7,
+                    child: LoginGoogleButton())
+              ]),
+        ),
       ),
     );
   }

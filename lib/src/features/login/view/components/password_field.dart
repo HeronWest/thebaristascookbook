@@ -16,30 +16,29 @@ class _PasswordFieldState extends State<PasswordField> {
       padding: const EdgeInsets.only(bottom: 15, top: 2),
       width: screenSize.width * 0.7,
       child: TextFormField(
-        style: GoogleFonts.cormorantGaramond(
-            fontSize: 24, color: const Color(0xff8F542E)),
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Colors.white,
-          suffixIcon: const Icon(Icons.visibility),
-          suffixIconColor: const Color(0xff8F542E),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Color(0xff8F542E), width: 1),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Color(0xff8F542E), width: 1),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Color(0xff8F542E), width: 1),
-          ),
-          hintText: 'Senha',
-          hintStyle: GoogleFonts.cormorantGaramond(
+          obscureText: true,
+          style: GoogleFonts.cormorantGaramond(
               fontSize: 24, color: const Color(0xff8F542E)),
-        ),
-      ),
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.transparent,
+            border: const UnderlineInputBorder(
+              borderSide: BorderSide(color: Color(0xff8F542E), width: 1),
+            ),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: const BorderSide(color: Color(0xff8F542E), width: 1),
+            ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: const BorderSide(color: Color(0xff8F542E), width: 1),
+            ),
+            hintText: 'Senha',
+            hintStyle: GoogleFonts.cormorantGaramond(
+                fontSize: 22, color: const Color(0xff8F542E).withOpacity(0.6)),
+            prefixIcon: Icon(
+              Icons.key,
+              color: const Color(0xff8F542E).withOpacity(0.6),
+            ),
+          )),
     );
   }
 }

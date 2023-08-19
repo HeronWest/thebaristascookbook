@@ -73,7 +73,7 @@ class MainPage extends StatelessWidget {
                 barrierDismissible: true,
                 opaque: false,
                 pageBuilder: (context, animation, secondaryAnimation) =>
-                    NewRecipePage(),
+                    const NewRecipePage(),
                 transitionsBuilder:
                     (context, animation, secondaryAnimation, child) {
                   const begin = Offset(0.0, 1.0);
