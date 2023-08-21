@@ -1,0 +1,10 @@
+flutter_native_splash:
+    
+  color: "#FFFCF4"
+  # image: assets/images/solaLogo.png
+  
+  android_12:
+
+    color: "#FFFCF4"
+    # image: assets/images/solaLogo.png
+    android_disable_fullscreen: true

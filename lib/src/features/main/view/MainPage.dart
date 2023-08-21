@@ -53,6 +53,7 @@ class MainPage extends StatelessWidget {
           ),
         ),
       ),
+      backgroundColor: const Color(0xffFFFCF4),
       body: PageControllerWidget(
         pageNotifier: _pageNotifier,
       ),
@@ -91,8 +92,7 @@ class MainPage extends StatelessWidget {
               ));
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      backgroundColor: const Color(0xffFFFCF4),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
   }
 }

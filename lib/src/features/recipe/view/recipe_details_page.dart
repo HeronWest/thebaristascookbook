@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thebaristascookbook/src/features/recipe/view/components/ingredients.dart';
 import 'package:thebaristascookbook/src/features/recipe/view/components/portion_widget.dart';
-import 'package:thebaristascookbook/src/features/recipe/view/components/start_button.dart';
 import 'package:thebaristascookbook/src/features/recipe/view/components/steps.dart';
 
 class RecipeDetailsPage extends StatefulWidget {
@@ -83,7 +82,8 @@ class _RecipeDetailsPageState extends State<RecipeDetailsPage> {
                               child: Text(
                                 'Ingredientes',
                                 style: GoogleFonts.cormorantGaramond(
-                                    color: const Color(0xff8F542E), fontSize: 28),
+                                    color: const Color(0xff8F542E),
+                                    fontSize: 28),
                               ),
                             ),
                             IngredientsWidget(),
@@ -92,7 +92,8 @@ class _RecipeDetailsPageState extends State<RecipeDetailsPage> {
                               child: Text(
                                 'Modo de Preparo',
                                 style: GoogleFonts.cormorantGaramond(
-                                    color: const Color(0xff8F542E), fontSize: 28),
+                                    color: const Color(0xff8F542E),
+                                    fontSize: 28),
                               ),
                             ),
                             const PrepareSteps()
@@ -103,7 +104,7 @@ class _RecipeDetailsPageState extends State<RecipeDetailsPage> {
                   ),
                 ],
               ),
-              const StartButton(),
+              // const StartButton(),
             ],
           ),
         ],

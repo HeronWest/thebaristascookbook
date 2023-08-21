@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thebaristascookbook/src/features/recipe/view/recipe_details_page.dart';
@@ -19,8 +20,11 @@ class ItemsCaroussel extends StatelessWidget {
     // var screenSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [...items.map((e) => e).toList()],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 18.0),
+          child: Row(
+            children: [...items.map((e) => e).toList()],
+          ),
         ));
   }
 }
@@ -32,51 +36,87 @@ class _Item extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      width: screenSize.width * 0.7,
-      height: screenSize.height * 0.48,
+      width: screenSize.width * 0.6,
+      height: screenSize.height * 0.42,
       child: Card(
+        elevation: 4,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
         ),
-        color: const Color(0xff291505).withOpacity(0.9),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Moccaccino Chocolate (Receita para coados)',
-                style: GoogleFonts.content(color: Colors.white, fontSize: 16),
+        color: const Color(0xffFFFCF4),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              child: Image.asset(
+                'assets/images/cappuccino.jpg',
+                width: screenSize.width * 0.6,
               ),
-              FractionallySizedBox(
-                widthFactor: 0.8,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(14.0),
+                child: Column(
                   children: [
                     Text(
-                      '15 min',
+                      'Moccaccino Chocolate (Receita para coados)',
                       style: GoogleFonts.content(
-                          color: Colors.white.withOpacity(0.7), fontSize: 14),
+                          color: Colors.black,
+                          fontSize: 20 * (screenSize.width * 0.002)),
+                      textAlign: TextAlign.start,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    Text(
-                      '182kcal',
-                      style: GoogleFonts.content(
-                          color: Colors.white.withOpacity(0.7), fontSize: 14),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AutoSizeText(
+                          '15 min',
+                          style: GoogleFonts.content(
+                              color: Colors.black.withOpacity(0.7),
+                              fontSize: 16 * (screenSize.width * 0.002)),
+                          minFontSize: 10,
+                          textAlign: TextAlign.start,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: AutoSizeText(
+                            '182kcal',
+                            minFontSize: 10,
+                            style: GoogleFonts.content(
+                                color: Colors.black.withOpacity(0.7),
+                                fontSize: 16 * (screenSize.width * 0.002)),
+                          ),
+                        ),
+                      ],
                     ),
+                    // Text(
+                    //     'Delicie-se com a perfeita harmonia do Mocaccino, uma indulgente mistura de espresso, chocolate e leite vaporizado, coberto com chantilly e chocolate em pó.',
+                    //     style: GoogleFonts.content(
+                    //         color: Colors.black.withOpacity(0.7), fontSize: 14),
+                    //     maxLines: 2,
+                    //     softWrap: true),
                   ],
                 ),
               ),
-              IconButton(
-                  onPressed: () =>
-                      Navigator.of(context).push(_goToRecipeDetails()),
-                  icon: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                    size: 36,
-                  )),
-              Image.asset('assets/images/moca.png', fit: BoxFit.fitHeight)
-            ],
-          ),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: const EdgeInsets.all(14.0),
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(_goToRecipeDetails());
+                    },
+                    icon: const Icon(
+                      Icons.arrow_forward,
+                      color: Color(0xff8F542E),
+                      size: 36,
+                    )),
+              ),
+            ),
+          ],
         ),
       ),
     );

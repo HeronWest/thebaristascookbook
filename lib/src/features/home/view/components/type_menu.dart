@@ -12,8 +12,10 @@ class TypeMenu extends StatelessWidget {
       type: 'Chá',
       color: const Color(0xffF8DF86).withOpacity(0.6),
     ),
-    TypeMenuItem(type: 'Frapê', color: const Color(0xffB6B926).withOpacity(0.6)),
-    TypeMenuItem(type: 'Smoothie', color: const Color(0xff104B64).withOpacity(0.6)),
+    TypeMenuItem(
+        type: 'Frapê', color: const Color(0xffB6B926).withOpacity(0.6)),
+    TypeMenuItem(
+        type: 'Smoothie', color: const Color(0xff104B64).withOpacity(0.6)),
     const TypeMenuItem(type: 'Chocolate'),
     const TypeMenuItem(type: 'Cocktail'),
   ];
@@ -22,8 +24,11 @@ class TypeMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [..._types.map((e) => e).toList()],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 18.0),
+        child: Row(
+          children: [..._types.map((e) => e).toList()],
+        ),
       ),
     );
   }
@@ -38,8 +43,8 @@ class TypeMenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 35,
-      margin: const EdgeInsets.only(right: 10),
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+      margin: const EdgeInsets.only(right: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 2),
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(10),
