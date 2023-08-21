@@ -2,28 +2,32 @@
 import 'dart:convert';
 
 class UserModel {
-  String? id;
+  int? id;
   String name;
   String email;
+  String nickname;
   String? phone;
 
   UserModel({
     this.id,
     required this.name,
     required this.email,
+    required this.nickname,
     this.phone,
   });
 
   UserModel copyWith({
-    String? id,
+    int? id,
     String? name,
     String? email,
+    String? nickname,
     String? phone,
   }) {
     return UserModel(
       id: id ?? this.id,
       name: name ?? this.name,
       email: email ?? this.email,
+      nickname: nickname ?? this.nickname,
       phone: phone ?? this.phone,
     );
   }
@@ -33,44 +37,48 @@ class UserModel {
       'id': id,
       'name': name,
       'email': email,
+      'nickname': nickname,
       'phone': phone,
     };
   }
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
-      id: map['id'] != null ? map['id'] as String : null,
+      id: map['id'] as int,
       name: map['name'] as String,
       email: map['email'] as String,
-      phone: map['phone'] != null ? map['phone'] as String : null,
+      nickname: map['nickname'] as String,
+      phone: map['phone'] as String,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory UserModel.fromJson(String source) => UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserModel.fromJson(String source) =>
+      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
-    return 'UserModel(id: $id, name: $name, email: $email, phone: $phone)';
+    return 'UserModel(id: $id, name: $name, email: $email, nickname: $nickname, phone: $phone)';
   }
 
   @override
   bool operator ==(covariant UserModel other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.id == id &&
-      other.name == name &&
-      other.email == email &&
-      other.phone == phone;
+
+    return other.id == id &&
+        other.name == name &&
+        other.email == email &&
+        other.nickname == nickname &&
+        other.phone == phone;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      name.hashCode ^
-      email.hashCode ^
-      phone.hashCode;
+        name.hashCode ^
+        email.hashCode ^
+        nickname.hashCode ^
+        phone.hashCode;
   }
 }

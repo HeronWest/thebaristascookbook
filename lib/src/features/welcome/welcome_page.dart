@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thebaristascookbook/src/features/login/view/login_page.dart';
+import 'package:thebaristascookbook/src/features/register/register_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -30,7 +31,12 @@ class WelcomePage extends StatelessWidget {
                   width: screenSize.width * 0.7,
                   height: 60,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                      );
+                    },
                     child: Text('Cadastrar',
                         style: GoogleFonts.cormorantGaramond(fontSize: 24)),
                     style: const ButtonStyle(
