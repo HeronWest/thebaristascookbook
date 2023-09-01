@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PageViewController with ChangeNotifier {
   int _page = 2;
-  PageController pageController = PageController();
+  PageController pageController = PageController(initialPage: 2);
 
   int get page => _page;
 

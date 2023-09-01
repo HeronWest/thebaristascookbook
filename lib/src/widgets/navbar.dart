@@ -49,7 +49,7 @@ class NavBar extends StatelessWidget {
                       ),
                       child: IconButton(
                         icon: const Icon(
-                          Icons.star_outline,
+                          Icons.favorite_border_outlined,
                           size: 36,
                           color: Color(0xff8F542E),
                         ),
