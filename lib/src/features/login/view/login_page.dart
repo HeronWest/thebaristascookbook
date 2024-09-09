@@ -60,11 +60,11 @@ class _LoginPageState extends State<LoginPage> {
                         color: const Color(0xff8F542E), fontSize: 48),
                   ),
                 ),
-                Padding(padding: EdgeInsets.only(top: 10)),
+                const Padding(padding: EdgeInsets.only(top: 10)),
                 const UserField(),
-                Padding(padding: EdgeInsets.only(top: 10)),
+                const Padding(padding: EdgeInsets.only(top: 10)),
                 const PasswordField(),
-                Padding(padding: EdgeInsets.only(top: 30)),
+                const Padding(padding: EdgeInsets.only(top: 30)),
                 SizedBox(
                   height: 60,
                   width: screenSize.width * 0.7,
@@ -79,11 +79,11 @@ class _LoginPageState extends State<LoginPage> {
                           fontSize: 14,
                           fontWeight: FontWeight.bold),
                     )),
-                Padding(padding: EdgeInsets.only(bottom: 40)),
+                const Padding(padding: EdgeInsets.only(bottom: 40)),
                 SizedBox(
                     height: 60,
                     width: screenSize.width * 0.7,
-                    child: LoginGoogleButton())
+                    child: const LoginGoogleButton())
               ]),
         ),
       ),

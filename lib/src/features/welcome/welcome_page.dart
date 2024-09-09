@@ -27,18 +27,16 @@ class WelcomePage extends StatelessWidget {
                   width: screenSize.width * 0.8),
               Padding(
                 padding: const EdgeInsets.only(top: 40.0),
-                child: Container(
+                child: SizedBox(
                   width: screenSize.width * 0.7,
-                  height: 60,
+                  height: 55,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                        MaterialPageRoute(builder: (context) => const RegisterPage()),
                       );
                     },
-                    child: Text('Cadastrar',
-                        style: GoogleFonts.cormorantGaramond(fontSize: 24)),
                     style: const ButtonStyle(
                       elevation: MaterialStatePropertyAll<double>(5),
                       backgroundColor: MaterialStatePropertyAll<Color>(
@@ -48,32 +46,34 @@ class WelcomePage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       )),
                     ),
+                    child: Text('Cadastrar',
+                        style: GoogleFonts.cormorantGaramond(fontSize: 24)),
                   ),
                 ),
               ),
-              Padding(padding: EdgeInsets.only(top: 10)),
-              Container(
+              const Padding(padding: EdgeInsets.only(top: 10)),
+              SizedBox(
                 width: screenSize.width * 0.7,
-                height: 60,
+                height: 55,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
-                  child: Text('Entrar',
-                      style: GoogleFonts.cormorantGaramond(
-                          fontSize: 24, color: Color(0xff8F542E))),
                   style: const ButtonStyle(
                     elevation: MaterialStatePropertyAll<double>(5),
                     backgroundColor: MaterialStatePropertyAll<Color>(
-                      const Color(0xffFFFCF4),
+                      Color(0xffFFFCF4),
                     ),
                     shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     )),
                   ),
+                  child: Text('Entrar',
+                      style: GoogleFonts.cormorantGaramond(
+                          fontSize: 24, color: const Color(0xff8F542E))),
                 ),
               )
             ],
